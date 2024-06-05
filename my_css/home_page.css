@@ -1,0 +1,105 @@
+body {
+    background-image: url('../immagini/Back_Photo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.background-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.55);
+    z-index: -1; /* viene messa l'immagine dietro a tutti gli altri elementi */
+}
+
+.mrg_logo {   
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.size_text_descr {
+    font-weight: 300;
+    font-size: 30px;
+}
+
+/* Gestione grandezza della descrizione in base alla grandezza dello schermo */
+@media (min-width: 600px) and (max-width: 1800px) {
+    .size_text_descr {
+        font-weight: 300;
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .size_text_descr {
+        font-weight: 350;
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .size_text_descr {
+        font-weight: 200;
+        font-size: 20px;
+    }
+
+    #messageBox {
+        width: 90%
+    }
+}
+
+/* Gestione stile e stati pulsanti */
+.btn-red {
+    background-color: #800000e0;
+    border-color: #800000e0;
+    color: white; 
+}
+
+.btn-red:hover {
+    background-color: #af0505bf; 
+    border-color: #af0505bf;
+    color: white;
+}
+
+.btn-red:focus {
+    background-color: #af0505bf; 
+    border-color: #af0505bf;
+    color: white;
+}
+
+.btn-red:active {
+    background-color: #800000e0 !important;
+    border-color: #800000e0 !important;
+    color: white !important;
+}
+
+.color_bar {
+    background-color: #800000e0; 
+}
+
+#messageBox {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(97, 96, 96, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 9999;
+}
+
+.info-button {
+    background-color: #800000e0;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

@@ -1,0 +1,95 @@
+body {
+    background-image: url('../immagini/Back_Photo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.background-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+}
+
+.mrg_logo {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.color_bar {
+    background-color: #800000e0; 
+}
+
+.color_card {
+    background-color: #f1eaeab4; 
+}
+
+.card {
+    margin-top: 50px;
+}
+
+.btn-red {
+    background-color: #800000e0;
+    border-color: #800000e0;
+    color: white; 
+}
+
+.btn-red:hover {
+    background-color: #af0505bf; 
+    border-color: #af0505bf;
+    color: white;
+}
+.btn-red:focus {
+    background-color: #af0505bf; 
+    border-color: #af0505bf;
+    color: white;
+}
+
+.btn-red:active {
+    background-color: #800000e0 !important;
+    border-color: #800000e0 !important;
+    color: white !important;
+}
+
+.margin_button {
+    width: 150px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+@media (max-width: 700px) {
+    .margin_button {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+.user-info {
+    display: flex;
+    align-items: center; 
+}
+
+.user-info img {
+    margin-right: 20px; 
+}
+
+.user-info p {
+    font-family: "Times New Roman", Times, serif; 
+    font-size: 16px;
+}
+
+#messageBox {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(97, 96, 96, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
