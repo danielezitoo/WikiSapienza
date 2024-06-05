@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/css/bootstrap.css" rel="stylesheet">
+    <title>WikiSapienza</title>
+    <link rel="stylesheet" type="text/css" href="./my_css/home_page.css">
+    <link rel="icon" href="./immagini/LogoFinale.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./immagini/LogoFinale.png" type="image/x-icon">
+    <!-- Script per gestione pulsante per mostrare link nella navbar nella versione da telefono -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- Div per lo sfondo -->
+    <div class="background-overlay"></div>
+    <!-- Div per la navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark color_bar">
+        <a class="navbar-brand">
+            <img src="./immagini/LogoFinale.png" alt="Logo" class="mrg_logo" width="25" height="25">WikiSapienza
+        </a>
+        
+        <!-- Pulsante che contiene i link nella navbar da telefono -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto" style="margin-left: 10px;">
+                <li class="nav-item">
+                    <a class="nav-link" href="about_us.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/danielezitoo/WikiSapienza">Source Code</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Div per la zona centrale -->
+    <div class="container">
+        <br>
+        <br>
+        <div class="container text-center align-items-center">
+            <div class="text-center">
+                <br>
+                <h1 class="display-2">Benvenuto in WikiSapienza!</h1>
+                <br>
+                <br>
+                <p class="lead size_text_descr">
+                    Benvenuto nel portale relativo all'università La Sapienza di Roma.
+                    Scopri informazioni su corsi accademici, esami universitari e molto altro ancora.
+                    Esplora, fai domande, condividi e contribuisci tramite la tua esperienza nei vari forum dedicati a risolvere i quesiti altrui.
+                </p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <!-- Div per la zona pulsanti di login e dei 2 sign_up -->
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <h2>Hai già un account?</h2>
+                    <p>
+                        <button type="submit" class="btn btn-red" onclick="window.location.href='login.php'">Accedi</button>
+                    </p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h2>Non sei ancora registrato?</h2>
+                    <p>
+                        <button type="submit" class="btn btn-red" onclick="window.location.href='sign_up.php'">Registrati</button>
+                    </p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h2>
+                        Registrati come ospite
+                        <button type="button" class="info-button translate-middle-y" onclick="toggleMessageBox()">i</button>
+                    </h2>
+                    <p>
+                        <button type="submit" class="btn btn-red" onclick="window.location.href='sign_up_ospite.php'">Ospite</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="messageBox" class="text-center">
+        <!-- MessageBox per chi effettua l'accesso come ospite -->
+        <p>
+            Attenzione! <br>
+            La possibilità di creare discussioni e parteciparvi è 
+            riservata ai soli iscritti all'ateneo dotati di una mail
+            istituzionale valida. In alternativa è possibile registrarsi come ospite. 
+        </p>
+    </div>
+
+    <script>
+        // Funzioni per gestire il comportamento del messaggio di info (posso ricliccarlo per farlo sparire o aspettare 6 secondi per farlo sparire da solo)
+        var messageBoxVisible = false;
+
+        function showMessage() {
+            document.getElementById('messageBox').style.display = 'block';
+            messageBoxVisible = true;
+            setTimeout(hideMessage, 6000);
+        }
+
+        function hideMessage() {
+            if (!messageBoxVisible) return;
+            document.getElementById('messageBox').style.display = 'none';
+            messageBoxVisible = false;
+        }
+
+        function toggleMessageBox() {
+            if (messageBoxVisible) {
+                hideMessage();
+            } else {
+                showMessage();
+            }
+        }
+    </script>
+</body>
+</html>

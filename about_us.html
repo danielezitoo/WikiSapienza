@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="i">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/css/bootstrap.css" rel="stylesheet">
+    <title>About Us</title>
+    <link rel="stylesheet" type="text/css" href="./my_css/about_us.css">
+    <link rel="icon" href="./immagini/LogoFinale.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./immagini/LogoFinale.png" type="image/x-icon">
+    <!-- Script per gestione pulsante per mostrare link nella navbar nella versione da telefono -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- Div per sondo -->
+    <div class="background-overlay"></div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark color_bar">
+        <a class="navbar-brand" href="#" id="wikisapienza-link"> <!-- Id per gestire il ritorno alla pagina precedente che sia home_page o main_page -->
+            <img src="./immagini/LogoFinale.png" alt="Logo" class="mr-2 mrg_logo" width="25" height="25">WikiSapienza
+        </a>      
+        
+        <!-- Pulsante che contiene i link nella navbar da telefono -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto" style="margin-left: 10px;">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/danielezitoo/WikiSapienza">Source Code</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <!-- Intestazione e testo di ringraziamento -->
+    <div class="container">
+        <div>
+            <br>
+            <p class="lead size_text_descr1">Desideriamo ringraziare sinceramente tutti coloro che hanno visitato il nostro sito e che hanno
+                contribuito al suo successo. È grazie al vostro supporto e al vostro interesse che siamo riusciti a trasformare un'idea iniziale
+                in una risorsa educativa online dinamica e ricca di contenuti. Un ringraziamento speciale va al professore Lorenzo Marconi,
+                il cui sostegno e guida hanno reso possibile la realizzazione di questo progetto.
+            </p>
+            <br>
+            <p class="lead size_text_descr2">L'idea di WikiSapienza è nata prima ancora che Lorenzo Ricci e Daniele Zito diventassero colleghi
+                universitari, è emersa dalla condivisione di passioni comuni e dalla voglia di creare qualcosa di significativo insieme. Iniziato
+                durante il corso di Linguaggi e tecnologie per il web e grazie alle conoscenze acquisite durante quest'ultimo, sotto la guida
+                del docente Lorenzo Marconi, hanno dato vita a WikiSapienza, un sito web che va oltre i confini dell'aula. Inizialmente concepito
+                come parte integrante dell'esame, WikiSapienza si è evoluto in una risorsa educativa online, offrendo una vasta gamma di contenuti
+                per studenti, docenti e future matricole dell ateneo. Basato sul principio della wiki-forum, il sito si fonda sulla condivisione di
+                idee e di esperienze, permettendo a chiunque di contribuire e arricchire le informazioni disponibili per i futuri visitatori.
+            </p>
+            <br>
+            <!-- contatti -->
+            <p class="lead size_text_descr1" style="font-weight: 500;">
+                Contatti:
+            </p>
+            <p class="lead" style="font-weight: 400;">
+                <span class="bullet">&#8226;</span> Daniele Zito - <a href="mailto:zito.1985455@studenti.uniroma1.it" style="color: #800000e0; ">zito.1985455@studenti.uniroma1.it</a>
+                <br>
+                <span class="bullet">&#8226;</span> Lorenzo Ricci - <a href="mailto:ricci.1986714@studenti.uniroma1.it" style="color: #800000e0; ">ricci.1986714@studenti.uniroma1.it</a>
+            </p>
+        </div>
+    </div>
+    <!-- Script per gestire il ritorno alla pagina precedente (se la pagina precedente è home_page, rimanda lì, altrimenti rimanda a main_page) -->
+    <script>
+        $(document).ready(function() {
+            var previousPage = document.referrer;
+            var destinationPage = (previousPage.endsWith("home_page.html")) ? "home_page.html" : "main_page.html";
+            $("#wikisapienza-link").attr("href", destinationPage);
+        });
+    </script>
+</body>
+</html>

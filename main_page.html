@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/css/bootstrap.css" rel="stylesheet">
+    <title>WikiSapienza</title>
+    <link rel="icon" href="./immagini/LogoFinale.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./immagini/LogoFinale.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="./my_css/main_page.css">
+    <!-- Script per gestione pulsante per mostrare link nella navbar nella versione da telefono -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- Div per lo sfondo -->
+    <div class="background-overlay"></div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark color_bar">
+        <a class="navbar-brand">
+        <img src="./immagini/LogoFinale.png" alt="Logo" class="mr-2 mrg_logo" width="25" height="25">WikiSapienza
+        </a>
+
+        <!-- Pulsante che contiene i link nella navbar da telefono -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto" style="margin-left: 10px;">
+                <li class="nav-item">
+                    <a class="nav-link" href="my_area.php">My Area</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about_us.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/danielezitoo/WikiSapienza">Source Code</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <!-- Div per la searchbar con le varie facoltà-->
+    <div class="container mt-5 text-center">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1 class="display-2">WikiSearch</h1>
+                <br>
+                <div class="custom-search-bar">
+                    <select name="Facoltà" required class="form-control" onchange="redirect()">
+                        <option value="" style="display:none;">Ricerca una facoltà...</option>
+                        <option value="ingegneria">Ingegneria</option>
+                        <option value="architettura">Architettura</option>
+                        <option value="economia">Economia</option>
+                        <option value="medicina">Medicina</option>
+                        <option value="fisica">Fisica</option>  
+                        <option value="matematica">Matematica</option> 
+                        <option value="giurisprudenza">Giurisprudenza</option>
+                        <option value="psicologia">Psicologia</option>
+                        <option value="lettere_e_filosofia">Lettere e Filosofia</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- Div per link utili -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="d-flex justify-content-around">
+                    <a href="https://www.uniroma1.it/it/pagina-strutturale/studenti" class="text-decoration-none d-inline-block p-3">
+                        <img src="./immagini/logo_sapienza.jpg" alt="Logo" class="img-fluid rounded-circle" width="90">
+                        <span class="d-block text-center text-dark" style="font-size: larger;">InfoStud</span>
+                    </a>
+                    <a href="https://classroom.google.com/u/1/h" class="text-decoration-none d-inline-block p-3">
+                        <img src="./immagini/logo_classroom.jpg" alt="Logo" class="img-fluid rounded-circle" width="90">
+                        <span class="d-block text-center text-dark" style="font-size: larger;">Classroom</span>
+                    </a>
+                    <a href="https://elearning.uniroma1.it/" class="text-decoration-none d-inline-block p-3">
+                        <img src="./immagini/logo_moodle.jpg" alt="Logo" class="img-fluid rounded-circle" width="90">
+                        <span class="d-block text-center text-dark" style="font-size: larger;">Moodle</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // funzione per reinderizzare alla pagina della facoltà
+        function redirect() {
+            var select = document.querySelector('select[name="Facoltà"]');
+            var selectedOption = select.options[select.selectedIndex].value;
+            
+            // Controlla se è stata selezionata un'opzione
+            if (selectedOption !== "") {
+                // Reindirizza alla pagina corrispondente all'opzione selezionata
+                window.location.href = "./facolta/" + selectedOption + ".html";
+            }
+        }
+    </script>
+</body>
+</html>
