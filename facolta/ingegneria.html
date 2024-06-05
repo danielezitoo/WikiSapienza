@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/css/bootstrap.css" rel="stylesheet">
+    <title>Ingegneria</title>
+    <link rel="stylesheet" type="text/css" href="../my_css/facolta.css">
+    <style>
+        /* Sfondo personalizzato */
+        body {
+            background-image: url('../immagini/sfondo_ing.jpg');
+        }
+    </style>
+    <link rel="icon" href="../immagini/LogoFinale.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../immagini/LogoFinale.png" type="image/x-icon">
+    <!-- Script per gestione pulsante per mostrare link nella navbar nella versione da telefono -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- Div per sondo -->
+    <div class="background-overlay"></div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark color_bar">
+        <a class="navbar-brand" href="../main_page.html">
+            <img src="../immagini/LogoFinale.png" alt="Logo" class="mr-2 mrg_logo" width="25" height="25">WikiSapienza
+        </a>
+
+        <!-- Pulsante che contiene i link nella navbar da telefono -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto" style="margin-left: 10px;">
+                <li class="nav-item">
+                    <a class="nav-link" href="../my_area.php">My Area</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../about_us.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/danielezitoo/WikiSapienza">Source Code</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Div per titilo, descrizione e vari corsi della facoltà -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="size_text_titolo"><img src="../immagini/logo_ing.png" alt="Logo Personalizzabile" width="40" height="40">Ingegneria</h1>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <p class="lead size_text_descr">
+                    La facoltà di ingegneria è un ambiente formativo dedicato alla preparazione di professionisti nell'ambito della progettazione,
+                    sviluppo e gestione di soluzioni tecnologiche innovative. 
+                    Attraverso un approccio pratico e interdisciplinare, gli studenti acquisiscono conoscenze approfondite di matematica,
+                    fisica, informatica, elettrotecnica e altre discipline fondamentali per la comprensione e l'applicazione dei principi ingegneristici. 
+                    <br><br>
+                    Oltre alla teoria, gli studenti sperimentano l'apprendimento pratico attraverso progetti di ingegneria, laboratori
+                    e stage presso aziende del settore, sotto la guida di docenti e professionisti del settore. 
+                    La facoltà di ingegneria si impegna a formare professionisti capaci di contribuire
+                    all'innovazione tecnologica e al progresso della società.
+                </p>
+                
+            </div>
+            <div class="col-md-6">
+                <h3 class="text-center">I corsi di questa facoltà:</h3>
+                <br>
+                <p class="lead size_text_mat text-center">
+                    <a class="btn-link" href="../wip.html">Ingegneria Civile</a><br>
+                    <a class="btn-link" href="../wip.html">Ingegneria Meccanica</a><br>
+                    <a class="btn-link" href="../wip.html">Ingegneria Elettronica</a><br>
+                    <a class="btn-link" href="./ing_informatica.php">Ingegneria Informatica</a><br>
+                    <a class="btn-link" href="../wip.html">Ingegneria Automatica</a><br>
+                    <a class="btn-link" href="../wip.html">Ingegneria Aereospaziale</a><br>
+                </p>
+            </div>            
+        </div>
+    </div>
+</body>
+</html>
